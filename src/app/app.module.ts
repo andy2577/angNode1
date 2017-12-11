@@ -11,11 +11,14 @@ import {RouterModule} from '@angular/router';
 import { MessagesComponent } from './messages.component';
 import {RegisterModule} from './register/register.module'
 import { RegisterComponent } from './register/register.component';
+import { LoginModule } from './login/login.module'
+import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes = [
   {path: 'register', component: RegisterComponent},
-  {path: 'home', component: AppComponent}
+  {path: 'home', component: AppComponent},
+  {path: 'login', component: LoginComponent}
 ]
 
 @NgModule({
@@ -31,7 +34,8 @@ const routes = [
     MatInputModule,
     RouterModule.forRoot(routes),
     RegisterModule ,
-    BrowserAnimationsModule   
+    BrowserAnimationsModule,
+    LoginModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

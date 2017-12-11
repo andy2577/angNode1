@@ -7,9 +7,7 @@ import { RegisterService } from './register.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  registerData: any ={
-
-  };
+  registerData: any = {};
   constructor(private registerService: RegisterService) { }
 
   ngOnInit() {
