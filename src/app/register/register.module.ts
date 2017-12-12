@@ -5,9 +5,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule} from '@angular/forms';
 import { RegisterService } from './register.service';
+import {MatFormFieldModule} from '@angular/material/form-field';
 @NgModule({
   imports: [
     CommonModule,
