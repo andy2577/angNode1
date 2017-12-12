@@ -3,7 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-<router-outlet></router-outlet>
+  <button  [routerLink]="['/users']" mat-raised-button color="primary">users</button>
+  <button  [routerLink]="['/login']" mat-raised-button color="primary">login</button>
+  <button  [routerLink]="['/register']" mat-raised-button color="primary">register</button>
+  <router-outlet></router-outlet>
  `,
   styleUrls: ['./app.component.css']
 })
