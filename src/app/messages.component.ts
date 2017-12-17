@@ -4,9 +4,7 @@ import { ApiService } from './api.service';
 @Component({
   selector: 'app-messages',
   template: `
-    <div *ngFor="let message of apiService.messages">
-      <mat-card>{{message.message }}</mat-card>
-    </div>
+    < [routerLink]="['/profile',user._id]>
   `,
 })
 export class MessagesComponent implements OnInit {

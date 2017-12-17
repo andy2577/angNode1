@@ -7,7 +7,7 @@ export class RegisterService {
   constructor(private http: Http) { }
 
   saveUser(data) {
-    this.http.post('http://localhost:3000/register', data).subscribe(
+    this.http.post('http://localhost:3000/auth/register', data).subscribe(
       (res) => {},
       (err) => {},
       () => {}

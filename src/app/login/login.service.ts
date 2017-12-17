@@ -7,7 +7,7 @@ export class LoginService {
   constructor(private http: Http) { }
 
   loginUser(data) {
-    this.http.post('http://localhost:3000/login', data).subscribe(
+    this.http.post('http://localhost:3000/auth/login', data).subscribe(
       (res: any) => { localStorage.setItem('token', res.json().token); },
       (err: any) => console.error(err),
       () => {}

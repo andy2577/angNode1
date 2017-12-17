@@ -18,8 +18,11 @@ import { UserListModule} from './user/user-list/user-list.module';
 import { UserListComponent } from './user/user-list/user-list.component';
 import { UserProfileModule} from './user/user-profile/user-profile.module';
 import { UserProfileComponent } from './user/user-profile/user-profile.component';
-
+import { MessageComponent } from './message/message.component';
+import { MessageModule } from './message/message.module';
+import { MessageListModule } from './message/message-list/message-list.module';
 const routes = [
+  {path: '', component: MessageComponent },
   {path: 'register', component: RegisterComponent},
   {path: 'home', component: AppComponent},
   {path: 'login', component: LoginComponent},
@@ -43,7 +46,9 @@ const routes = [
     BrowserAnimationsModule,
     LoginModule,
     UserListModule,
-    UserProfileModule
+    UserProfileModule,
+    MessageModule,
+    MessageListModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

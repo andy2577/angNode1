@@ -1,0 +1,18 @@
+
+
+<mat-card>
+  <mat-card-title>
+    New Message
+  </mat-card-title>
+
+
+</mat-card>
+
+<form>
+  
+  <mat-form-field>
+    <textarea matInput [(ngModel)]="postMessage" name="description" matTextareaAutosize matAutosizeMinRows="2"
+              placeholder="New Message" matAutosizeMaxRows="5"></textarea>
+  </mat-form-field>
+  <button (click)="saveMessage()" mat-raised-button color="primary">Post</button>
+</form>
