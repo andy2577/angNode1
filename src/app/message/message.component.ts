@@ -14,7 +14,7 @@ export class MessageComponent implements OnInit {
   }
 
   saveMessage() {
-    this.messageService.saveMessage({text:this.postMessage});
+    this.messageService.saveUser({text:this.postMessage});
 
   }
 

@@ -7,6 +7,7 @@ import {MatInputModule} from '@angular/material';
 import { AppComponent } from './app.component';
 import { ApiService } from './api.service';
 import { HttpModule} from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import { MessagesComponent } from './messages.component';
 import {RegisterModule} from './register/register.module';
@@ -21,6 +22,9 @@ import { UserProfileComponent } from './user/user-profile/user-profile.component
 import { MessageComponent } from './message/message.component';
 import { MessageModule } from './message/message.module';
 import { MessageListModule } from './message/message-list/message-list.module';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptorServiceService } from './auth-interceptor-service.service';
+
 const routes = [
   {path: '', component: MessageComponent },
   {path: 'register', component: RegisterComponent},
@@ -36,6 +40,7 @@ const routes = [
     , MessagesComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     HttpModule,
     MatButtonModule,
@@ -50,7 +55,12 @@ const routes = [
     MessageModule,
     MessageListModule
   ],
-  providers: [ApiService],
+  providers: [ApiService,
+  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptorServiceService,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

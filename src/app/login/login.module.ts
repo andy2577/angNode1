@@ -8,8 +8,10 @@ import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { LoginService } from './login.service';
+
 
 @NgModule({
   imports: [
@@ -19,7 +21,8 @@ import { LoginService } from './login.service';
     MatInputModule,
     MatFormFieldModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   declarations: [LoginComponent],
   providers: [LoginService]

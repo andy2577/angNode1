@@ -9,13 +9,14 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule} from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import { RouterModule, Routes } from '@angular/router';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     MatCardModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   declarations: [UserListComponent],
   providers: [UserListService]

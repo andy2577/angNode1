@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
+import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
@@ -7,7 +8,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class UserListService {
 
-  constructor(private http: Http) {}
+  constructor(private http: HttpClient) {}
 
   getUsers(): Observable<any[]> {
    return this.http.get('http://localhost:3000/users')
@@ -16,7 +17,7 @@ export class UserListService {
   }
   
   private extractData(res: Response) {
-    return res.json() || {};
+    return res || {};
   }
 
   private handleErorr(error: Response | any) {

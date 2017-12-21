@@ -5,12 +5,13 @@ import { UserApiService } from '../user-api.service';
 import { MessageListModule } from '../../message/message-list/message-list.module';
 
 import {MatCardModule} from '@angular/material/card';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   imports: [
     CommonModule,
     MatCardModule,
-    MessageListModule
+    MessageListModule,
+    HttpClientModule
   ],
   declarations: [UserProfileComponent],
   providers: [UserApiService]
