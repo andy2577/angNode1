@@ -16,6 +16,13 @@ export class UserListService {
     .catch(this.handleErorr);
   }
   
+  loadUsers(): Observable<any> {
+    return this.http.get(environment.path+'/users')
+    .map(this.extractData)
+    .catch(this.handleErorr);
+   }
+   
+
   private extractData(res: Response) {
     return res || {};
   }

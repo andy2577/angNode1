@@ -10,6 +10,7 @@ import { FormsModule} from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { UserTableComponent } from './../user-table/user-table.component'
 @NgModule({
   imports: [
     CommonModule,
@@ -18,7 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule,
     HttpClientModule
   ],
-  declarations: [UserListComponent],
+  declarations: [UserListComponent, UserTableComponent],
   providers: [UserListService]
 })
 export class UserListModule { }

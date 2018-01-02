@@ -24,6 +24,12 @@ import { MessageModule } from './message/message.module';
 import { MessageListModule } from './message/message-list/message-list.module';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptorServiceService } from './auth-interceptor-service.service';
+import { StoreModule } from "@ngrx/store";
+import { userReducer } from "./reducers/user.reducer";
+import { EffectsModule } from "@ngrx/effects";
+import { UserEffects } from "./effects/user.effects";
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+
 
 const routes = [
   {path: '', component: MessageComponent },
@@ -53,7 +59,11 @@ const routes = [
     UserListModule,
     UserProfileModule,
     MessageModule,
-    MessageListModule
+    MessageListModule,
+    StoreModule.forRoot({users: userReducer}),
+    EffectsModule.forRoot([UserEffects]),
+    StoreDevtoolsModule.instrument({maxAge: 25})
+    
   ],
   providers: [ApiService,
   {
