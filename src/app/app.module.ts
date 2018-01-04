@@ -10,8 +10,6 @@ import { HttpModule} from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import { MessagesComponent } from './messages.component';
-import {RegisterModule} from './register/register.module';
-import { RegisterComponent } from './register/register.component';
 import { LoginModule } from './login/login.module';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -29,11 +27,12 @@ import { userReducer } from "./reducers/user.reducer";
 import { EffectsModule } from "@ngrx/effects";
 import { UserEffects } from "./effects/user.effects";
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { NavigationModule } from "./navigation/navigation.module";
 
 
 const routes = [
   {path: '', component: MessageComponent },
-  {path: 'register', component: RegisterComponent},
+  {path: 'register', loadChildren: 'app/register/register.module#RegisterModule'},
   {path: 'home', component: AppComponent},
   {path: 'login', component: LoginComponent},
   {path: 'users', component: UserListComponent},
@@ -53,7 +52,7 @@ const routes = [
     MatCardModule,
     MatInputModule,
     RouterModule.forRoot(routes),
-    RegisterModule ,
+ 
     BrowserAnimationsModule,
     LoginModule,
     UserListModule,
@@ -62,7 +61,8 @@ const routes = [
     MessageListModule,
     StoreModule.forRoot({users: userReducer}),
     EffectsModule.forRoot([UserEffects]),
-    StoreDevtoolsModule.instrument({maxAge: 25})
+    StoreDevtoolsModule.instrument({maxAge: 25}),
+    NavigationModule
     
   ],
   providers: [ApiService,

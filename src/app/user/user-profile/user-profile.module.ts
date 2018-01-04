@@ -1,17 +1,13 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { UserProfileComponent } from './user-profile.component';
 import { UserApiService } from '../user-api.service';
 import { MessageListModule } from '../../message/message-list/message-list.module';
 
-import {MatCardModule} from '@angular/material/card';
-import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from './../../shared/shared.module'
 @NgModule({
   imports: [
-    CommonModule,
-    MatCardModule,
     MessageListModule,
-    HttpClientModule
+    SharedModule
   ],
   declarations: [UserProfileComponent],
   providers: [UserApiService]

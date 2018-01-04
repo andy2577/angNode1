@@ -1,0 +1,6 @@
+<p>
+  <button  [routerLink]="['/users']" mat-raised-button color="primary">users</button>
+  <button *ngIf="isSignIn" (click)=logOut() mat-raised-button color="primary">logout</button>
+  <button *ngIf="!isSignIn" [routerLink]="['/login']" mat-raised-button color="primary">login</button>
+  <button *ngIf="!isSignIn"  [routerLink]="['/register']" mat-raised-button color="primary">register</button>
+</p>

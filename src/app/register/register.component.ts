@@ -14,7 +14,7 @@ export class RegisterComponent implements OnInit {
   }
   post() {
     this.registerService.saveUser(this.registerData);
-    console.log(this.registerData);
+
   }
 
 }
