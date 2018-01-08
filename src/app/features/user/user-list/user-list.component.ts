@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserListService } from './user-list.service';
 import { Store } from "@ngrx/store";
-import * as userAction from './../../actions/user.action';
-import { AppState } from "./../../models/app-state";
+import * as userAction from './../../../actions/user.action';
+import { AppState } from "./../../../models/app-state";
 import { Observable } from 'rxjs/Observable';
 
 @Component({

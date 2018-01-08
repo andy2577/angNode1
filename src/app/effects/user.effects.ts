@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import * as userAction from "./../actions/user.action";
 import { Effect, Actions, toPayload } from "@ngrx/effects";
 
-import { UserListService } from './../user/user-list/user-list.service';
+import { UserListService } from './../features/user/user-list/user-list.service';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/map';
 

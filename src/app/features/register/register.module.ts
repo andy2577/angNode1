@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RegisterComponent } from './register.component';
 import { RegisterService } from './register.service';
-import { SharedModule } from "./../shared/shared.module";
+import { SharedModule } from "./../../shared/shared.module";
 import {RouterModule} from '@angular/router';
 
 @NgModule({
