@@ -1,6 +1,5 @@
-
-<div class="user-item" *ngFor="let user of users">
- 
-      {{user.name}}
-   
+<div class="user-item" *ngFor="let user of users" [routerLink]="['/profile',user._id]">
+      <mat-card >
+          {{user.name}}
+      </mat-card >
 </div>

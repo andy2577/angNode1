@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { LoginComponent } from './login.component';
 import { SharedModule } from "./../shared/shared.module";
-import { LoginService } from './login.service';
-
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   imports: [
-    SharedModule
+    SharedModule,
+    RouterModule.forChild([{path: '', component: LoginComponent,pathMatch:'full'}])
   ],
   declarations: [LoginComponent],
-  providers: [LoginService]
+  exports: [LoginComponent]
 })
 export class LoginModule { }
