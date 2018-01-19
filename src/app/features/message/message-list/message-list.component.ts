@@ -19,7 +19,7 @@ export class MessageListComponent implements OnInit {
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
-    
+
     this.messageListService.getMessages(this.id).subscribe(
       res => this.messages = res,
       err => console.error(err)

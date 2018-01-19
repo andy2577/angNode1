@@ -15,7 +15,7 @@ export class NavigationComponent implements OnInit {
   ngOnInit() {
     this.isSignIn = this.loginService.isLogIn;
   }
-  logOut(){
+  logOut() {
     debugger;
     this.loginService.logOut();
     this.isSignIn = this.loginService.isLogIn;

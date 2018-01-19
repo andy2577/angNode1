@@ -6,7 +6,7 @@ export function userReducer(state = [], action: userAction.Action) {
             return action.payload;
         }
         default: {
-            console.log('in user reducer ', action.type)
+            console.log('in user reducer ', action.type);
             return state;
         }
     }

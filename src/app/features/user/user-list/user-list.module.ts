@@ -8,7 +8,7 @@ import { SharedModule } from './../../../shared/shared.module'
   imports: [
     RouterModule,
     SharedModule,
-    
+
   ],
   declarations: [UserListComponent, UserTableComponent],
   providers: [UserListService]

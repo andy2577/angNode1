@@ -6,7 +6,7 @@ import { MessageService } from './message.service';
   styleUrls: ['./message.component.css']
 })
 export class MessageComponent implements OnInit {
-  postMessage = ''
+  postMessage = '';
   constructor(private messageService: MessageService) { }
 
   ngOnInit() {
@@ -14,7 +14,7 @@ export class MessageComponent implements OnInit {
   }
 
   saveMessage() {
-    this.messageService.saveUser({text:this.postMessage});
+    this.messageService.saveUser({text: this.postMessage});
 
   }
 

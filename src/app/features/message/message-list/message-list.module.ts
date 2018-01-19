@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { MessageListComponent } from './message-list.component';
 import { MessageListService } from './message-list.service';
-import { SharedModule } from "./../../../shared/shared.module";
+import { SharedModule } from './../../../shared/shared.module';
 
 @NgModule({
   imports: [
@@ -9,6 +9,6 @@ import { SharedModule } from "./../../../shared/shared.module";
   ],
   declarations: [MessageListComponent],
   providers: [MessageListService],
-  exports:[MessageListComponent]
+  exports: [MessageListComponent]
 })
 export class MessageListModule { }

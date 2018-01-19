@@ -18,13 +18,13 @@ import { UserProfileComponent } from './features/user/user-profile/user-profile.
 import { MessageComponent } from './features/message/message.component';
 import { MessageModule } from './features/message/message.module';
 import { MessageListModule } from './features/message/message-list/message-list.module';
-import { StoreModule } from "@ngrx/store";
-import { userReducer } from "./reducers/user.reducer";
-import { EffectsModule } from "@ngrx/effects";
-import { UserEffects } from "./effects/user.effects";
+import { StoreModule } from '@ngrx/store';
+import { userReducer } from './reducers/user.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { UserEffects } from './effects/user.effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { NavigationModule } from "./features/navigation/navigation.module";
-import { CoreModule } from "./core/core.module";
+import { NavigationModule } from './features/navigation/navigation.module';
+import { CoreModule } from './core/core.module';
 
 const routes = [
   {path: '', component: MessageComponent },
@@ -47,7 +47,7 @@ const routes = [
     MatButtonModule,
     MatCardModule,
     MatInputModule,
-    RouterModule.forRoot(routes,{enableTracing: false, preloadingStrategy: PreloadAllModules}),
+    RouterModule.forRoot(routes, {enableTracing: false, preloadingStrategy: PreloadAllModules}),
     CoreModule,
     BrowserAnimationsModule,
     UserListModule,
@@ -58,7 +58,6 @@ const routes = [
     EffectsModule.forRoot([UserEffects]),
     StoreDevtoolsModule.instrument({maxAge: 25}),
     NavigationModule
-    
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

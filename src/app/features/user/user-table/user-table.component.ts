@@ -6,7 +6,7 @@ import { Component, OnInit, Input,  EventEmitter, Output } from '@angular/core';
   styleUrls: ['./user-table.component.css']
 })
 export class UserTableComponent implements OnInit {
-  
+
   @Input() users: any[];
 
   constructor() { }

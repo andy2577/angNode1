@@ -1,3 +1,3 @@
 export interface AppState {
-    users: any[]
+    users: any[];
 }

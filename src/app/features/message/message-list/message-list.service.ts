@@ -20,12 +20,12 @@ export class MessageListService {
    }
 
    private extractData(res: Response) {
-    return res|| [];
+    return res || [];
   }
 
   private handleErorr(error: Response | any) {
 
-   
+
     return Observable.throw(error);
   }
 }
