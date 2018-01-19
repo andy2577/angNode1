@@ -29,7 +29,7 @@ export class UserListComponent implements OnInit {
 
   getUsers() {
     console.log('this.store.dispatch(new userAction.LoadUserAction())');
-    this.store.dispatch(new userAction.LoadUserAction())
+    this.store.dispatch(new userAction.LoadUserAction());
   }
 
 }
